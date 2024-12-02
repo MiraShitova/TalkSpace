@@ -26,7 +26,7 @@ class ChatServer {
 
     onMessage(ws, data) {
         const msgObject = JSON.parse(data.toString());
-        console.log(msgObject)
+        console.log(msgObject);
 
         switch (msgObject.type) {
             case 'message': {
@@ -62,7 +62,7 @@ class ChatServer {
                      type: 'message',
                      data: {
                           sender: sender.username,
-                          message: msgObject.data
+                          message: msgObject.data.message
                      }
                });
            }
